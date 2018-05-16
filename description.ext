@@ -1,0 +1,44 @@
+enableDebugConsole = 1;
+
+disabledAI = 1;
+author = "K";
+onLoadName = "Mini Mission #1";
+onLoadMission = "Mini Mission #1";
+
+#include "config.hpp"
+#include "Functions.hpp"
+#include "common.hpp"
+#include "Dialogs\voteNextMission.hpp"
+#include "CfgRemoteExec.hpp"
+
+respawn = 2;
+respawnDelay = 10;
+respawnDialog = 0;
+respawnTemplates[] = {"Tickets","MenuPosition"};
+respawnOnStart = 1;
+
+class RscTitles
+{
+	class  HUD
+	{
+		idd = 1000;
+		onLoad = "uiNamespace setVariable ['HUD',_this select 0]";
+		name = "HUD";
+		duration = 999999999999;
+		movingEnable = 0;
+		fadein = 0;
+		fadeout = 0;
+
+		class controls
+		{
+			class RscText_1000: RscText
+			{
+				idc = 1000;
+				x = 0.860937 * safezoneW + safezoneX;
+				y = 0.939828 * safezoneH + safezoneY;
+				w = 0.1375 * safezoneW;
+				h = 0.0549786 * safezoneH;
+			};
+		};
+	};
+};
